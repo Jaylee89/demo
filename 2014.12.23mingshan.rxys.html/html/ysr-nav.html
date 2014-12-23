@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ch">
+<!-- power by UBT CHAN -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<title>网站名</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="关键字" />
+<meta name="description" content="描述" />
+
+<meta name="apple-touch-fullscreen" content="YES" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="pragram" content="no-cache"/>
+<link rel="stylesheet" type="text/css"   href="css/style.css" />
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+<script type="text/javascript">
+var phoneWidth =  parseInt(window.screen.width);
+var phoneScale = phoneWidth/640;
+var ua = navigator.userAgent;
+if (/Android (\d+\.\d+)/.test(ua)){
+	var version = parseFloat(RegExp.$1);
+	// andriod 2.3
+	if(version>2.3){
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+	// andriod 2.3以上
+	}else{
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+	// 其他系统
+} else {
+	document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+}
+//微信去掉下方刷新栏
+if(RegExp("MicroMessenger").test(navigator.userAgent)){
+	document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		WeixinJSBridge.call('hideToolbar');
+	});
+}
+</script>
+</head>
+<body class="wrap">
+
+<!--fixed top -->
+<div class="fixed-top wrap">
+	<div class="title">壹善日</div>
+		<!--
+		<div class="navbar listbar">
+			<div class="webkit-box">
+				<div class="item">全部状态 <i class="icon icon_list_arrow"></i></div>
+				<div class="item">全部分类 <i class="icon icon_list_arrow"></i></div>
+				<div class="item">全部地区 <i class="icon icon_list_arrow"></i></div>		
+			</div>
+		</div> 
+		-->
+</div>
+<!--fixed top / -->
+
+<div class="body wrap list-bd">
+	<div class="padding40">
+		<ul class="list-nav">
+			<li><a href="ysr-nav.html">全部状态</a></li>
+			<li><a href="#">进行中</a></li>
+			<li><a href="#">已结束</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="fixed-bottom">
+	<div class="menu">		
+		<div class="back"><a href="javascript:history.back(-1)">&nbsp;</a></div>
+		<div class="link"><a href="xsrl.html">每日行善</a></div>
+		<div class="link hasub">
+			<span>行善记事</span>
+			<ul>
+				<li><a href="ssj.html">随手捐</a></li>
+				<li><a href="ysr.html">壹善日</a></li>
+			</ul>
+		</div>
+		<div class="link hasub">
+			<span>【 我 】</span>
+			<ul>
+				<li><a href="login.html">登录</a></li>
+				<li><a href="user.html">个人中心</a></li>
+				<li><a href="add-ysr.html">一善人</a></li>
+			</ul>
+		</div>	
+	</div>
+</div>
+
+
+<script type="text/javascript">
+$(".hasub").click(function(){
+	var sibing = $(this).siblings().children("ul");
+	var children = $(this).children("ul");	
+	if(sibing.hasClass("on")){
+		sibing.hide().removeClass("on");
+		}
+		else{
+		if (children.hasClass("on")){
+			children.hide().removeClass("on");
+			}
+			else{
+			children.show().addClass("on");
+			}
+			}
+	});
+</script>
+
+
+</body>
+</html>

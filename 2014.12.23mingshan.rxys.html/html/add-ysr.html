@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ch">
+<!-- power by UBT CHAN -->
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<title>网站名</title>
+<meta charset="utf-8" />
+<meta name="keywords" content="关键字" />
+<meta name="description" content="描述" />
+
+<meta name="apple-touch-fullscreen" content="YES" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="pragram" content="no-cache"/>
+<link rel="stylesheet" type="text/css"   href="css/style.css" />
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+<script type="text/javascript">
+var phoneWidth =  parseInt(window.screen.width);
+var phoneScale = phoneWidth/640;
+var ua = navigator.userAgent;
+if (/Android (\d+\.\d+)/.test(ua)){
+	var version = parseFloat(RegExp.$1);
+	// andriod 2.3
+	if(version>2.3){
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+	// andriod 2.3以上
+	}else{
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+	// 其他系统
+} else {
+	document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+}
+//微信去掉下方刷新栏
+if(RegExp("MicroMessenger").test(navigator.userAgent)){
+	document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		WeixinJSBridge.call('hideToolbar');
+	});
+}
+</script>
+</head>
+<body class="wrap">
+
+<!--fixed top -->
+<div class="fixed-top wrap">
+	<div class="title">一善人</div> 
+</div>
+<!--fixed top / -->
+
+<div class="body wrap">
+	<div class="user-top add-ysr">
+		<div class="photo"><img src="images/photo.png"/></div>
+		<div class="name">一善人</div>
+		<img src="css/img/bg_user.png" class="add-ysr-bg"/>
+	</div>
+	
+	<div class="add-ysr-main">
+		<div class="intro">
+			"日行一善"活动志愿者将作为本项目活动的组织者、培训师，其中将通过核心人才的培养，简历“壹善团”，成为可以在各地各生活小区巡回分享的核心力量。
+		
+			<div class="intro-bottom-bg"></div>
+		</div>
+		
+		<a href="#" class="btn-add-ysr" id="show-info">加入一善人</a>
+		
+		<div class="user-info" style="display:none">
+			<h3>完善资料</h3>
+			<form action="">
+			<table>
+				<tr><td>姓名 <span>*</span></td><td><input type="text" /></td></tr>
+				<tr><td>电话 <span>*</span></td><td><input type="text" /></td></tr>
+				<tr><td>义工号</td><td><input type="text" /></td></tr>
+				<tr><td>所在区</td><td><input type="text" /></td></tr>
+				<tr><td colspan="2" class="font-sm"><span>*</span>为必填项</td></tr>
+				<tr><td colspan="2"><button type="submit" class="btn-add-ysr">加入一善人</button></td></tr>
+			</table>
+					
+			</form>
+		</div>
+	</div>
+
+	
+</div>
+
+<div class="fixed-bottom">
+	<div class="menu">		
+		<div class="back"><a href="javascript:history.back(-1)">&nbsp;</a></div>
+		<div class="link"><a href="xsrl.html">每日行善</a></div>
+		<div class="link hasub">
+			<span>行善记事</span>
+			<ul>
+				<li><a href="ssj.html">随手捐</a></li>
+				<li><a href="ysr.html">壹善日</a></li>
+			</ul>
+		</div>
+		<div class="link hasub">
+			<span>【 我 】</span>
+			<ul>
+				<li><a href="login.html">登录</a></li>
+				<li><a href="user.html">个人中心</a></li>
+				<li><a href="add-ysr.html">一善人</a></li>
+			</ul>
+		</div>	
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+$(".hasub").click(function(){
+	var sibing = $(this).siblings().children("ul");
+	var children = $(this).children("ul");	
+	if(sibing.hasClass("on")){
+		sibing.hide().removeClass("on");
+		}
+		else{
+		if (children.hasClass("on")){
+			children.hide().removeClass("on");
+			}
+			else{
+			children.show().addClass("on");
+			}
+			}
+	});
+
+$("#show-info").click(function(){
+	$(this).hide(); 
+	$(".user-info").slideDown(300);		
+	});
+</script>
+
+
+
+</body>
+</html>
