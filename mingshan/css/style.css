@@ -9,7 +9,13 @@ img{border:0; vertical-align:middle;}
 input,textarea,button{outline:none;}
 button,input[type="submit"]{ cursor:pointer;}
 table{ border-collapse:collapse; border-spacing:0; font-size:inherit;}
-td,tr{ padding:0;}
+td,tr{ padding:0; }
+
+a,img{-webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */ }
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+}
 
 html{ word-break:break-all; word-wrap:break-word; height:100%;}
 body{ font: normal 100% Verdana, Arial,"微软雅黑","黑体","宋体"; line-height:1.42; color:#555; height:100%; overflow: hidden; 
@@ -23,8 +29,8 @@ body{ font: normal 100% Verdana, Arial,"微软雅黑","黑体","宋体"; line-he
 .img-middle i.middle{ display:inline-block; height:100%; vertical-align:middle;}
 .img-middle img{ vertical-align:middle;}
 
-a{ display:block; cursor:pointer;}
-a:link   { color:#555; text-decoration:none;}
+a{ display:block; cursor:pointer; text-decoration:none;}
+a:link   { color:#555; }
 a:visited{ color:#555;}
 a:hover  { color:#555; } 
 a:active { color:#555;} 
@@ -84,7 +90,7 @@ a:active { color:#555;}
 
 
 /******** login *********/
-.login{ padding-top:25%; width:380px; margin:0 auto; padding-bottom:25%;}
+.login{ padding-top:25%; width:380px; margin:0 auto; padding-bottom:300px;}
 .photo{ width:150px; height:150px; margin:0 auto; border-radius:80px; overflow:hidden; border:3px solid #fff; margin-bottom:30%;}
 .photo img{ width:150px; height:150px; border-radius:80px; overflow:hidden;}
 .login-input{ border-bottom:1px solid #51643f; margin-bottom:10%;}
@@ -190,7 +196,7 @@ a.btn-pay{ color:#fff; position:absolute; right:0; top:20px;}
 .add-ysr .name{ margin-top:30px; font-size:2.5em;}
 .add-ysr-bg{ width:100%; height:100%; position:absolute; left:0; top:0; z-index:-1;}
 
-.add-ysr-main{ padding:60px 120px 180px;}
+.add-ysr-main{ padding:60px 120px 240px;}
 .intro{background:url(img/bg_add_ysr.png) no-repeat top; padding:10px 20px 18px; font-size:1.2em; position:relative; margin-bottom:60px;}
 .intro-bottom-bg{ width:400px; height:28px; position:absolute; left:0; bottom:0; background:url(img/bg_add_ysr_bottom.png) no-repeat bottom;}
 
