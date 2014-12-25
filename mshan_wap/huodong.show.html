@@ -39,7 +39,14 @@
 		<div class="webkit-box">
 			<div class="item"><a href="{url app=waphuodong&act=sign_members&id=$huodong.hd_id}">报名人员</a></div> 
 			<div class="item">已募资￥0.00</div>
-			<div class="item"><a href="{url app=wapgooday&act=signup}">我要报名</a></div>
+            <div class="item">
+                <!--{if $huodong.status=='over'}-->
+                
+                报名已结束
+                <!--{else}-->
+                <a href="{url app=wapgooday&act=signup}">我要报名</a>
+                <!--{/if}-->
+            </div>
 		</div>	
 	</div>
 	<div class="menu">		

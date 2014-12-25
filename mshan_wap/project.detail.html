@@ -19,15 +19,16 @@
 	<div class="cont">
 		<div class="padding40">		
 			<div class="cont-top">
-                <p>发起单位：{$project.creator}</p>
+                <p>发起单位：{$creator.user_name}</p>
                 <p>项目目标：&yen;{$project.target_money}</p>
                 <p>结束时间：2015年1月1日</p>
 			</div>
 			<div class="cont-main">
 				<h3 class="title">活动详情</h3>
 				<div class="">
-					<img src="{$project.image}"/>
                     {$project.description}
+					<img src="{$project.image}"/>
+                    {$project_data.content}
 	</p>			
 				</div>
 			</div>
@@ -40,7 +41,13 @@
 		<div class="webkit-box">
 			<div class="item"><a href="#">关注</a></div> 
             <div class="item">已募资&yen;{$project.target_money_ed}</div>
-			<div class="item"><a href="{url app=wapproject&act=donate}">我要捐赠</a></div>
+			<div class="item">
+                <!--{if $project.status=='over'}-->
+                活动已结束
+                <!--{else}-->
+                <a href="{url app=wapproject&act=donate}">我要捐赠</a>
+                <!--{/if}-->
+            </div>
 		</div>	
 	</div>
 	<div class="menu">		

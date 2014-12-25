@@ -9,14 +9,14 @@
 <div class="body wrap xsrl">
 	<div class="padding20">
 		<ul  class="rili">
-            <!--{foreach from=$notepad item=note}-->
+            <!--{foreach from=$xingshan_list item=xingshan}-->
 			<li>
 				<i class="icon-rili today"></i>
-                <h3>{$note.title}</h3>
-                <p class="time">{$note.id_date}星期{$note.id_w}</p>
+                <h3>{$xingshan.title}</h3>
+                <p class="time">{$xingshan.id_date}星期{$xingshan.id_w}</p>
 				<div class="cont">
-					<img src="{res file=Images/mobile/rilo.png}"/>
-                    {$note.content}
+					<img src="{$xingshan.image}"/>
+                    {$xingshan.content}
 				</div>
 			</li>
             <!--{/foreach}-->
