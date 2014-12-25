@@ -1,0 +1,44 @@
+{include file=wap/mobile.header.html}
+
+<!--fixed top -->
+<div class="fixed-top wrap">
+	<div class="title">随手捐</div> 
+</div>
+<!--fixed top / -->
+
+<div class="body wrap list-bd">
+
+	<ul class="ysr-list ssj-list">
+        <!--{foreach from=$project_list item=project}-->
+		<li>
+			<div class="padding40">
+                <a href="{url app=wapproject&act=show&id=$project.project_id}">	
+				<div class="img">
+					<img src="{$project.image}" />
+					<i class="icon icon_over"></i>
+				</div>
+                <h3>{$project.title}</h3>	
+				<div class="plan">
+					<p style="width:48%;"></p>
+				</div>	
+				<div class="webkit-box">						
+					<div class="item">
+                        <span class="much">{$project.donated}</span>
+						<div>捐赠人数</div>
+					</div>
+					<div class="item">
+                        <span class="much">&yen;{$project.target_money_ed}</span>
+						<div>捐赠金额</div>
+					</div>
+					<div class="item">
+                        <span class="much">{$project.attention}</span>
+						<div>关注人数</div>
+					</div>
+				</div>					
+			</a>
+			</div>
+		</li>
+        <!--{/foreach}-->
+	</ul>
+</div>
+{include file=wap/mobile.footer.html}

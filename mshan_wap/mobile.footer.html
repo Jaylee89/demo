@@ -1,0 +1,51 @@
+<div class="fixed-bottom">
+	<div class="menu">		
+		<div class="back"><a href="javascript:history.back(-1)">&nbsp;</a></div>
+        
+        
+		<div class="link"><a href="{url app=wapxingshan}">每日行善</a></div>
+		<div class="link hasub">
+			<a href="javascript:void(0);">行善记事</a>
+			<ul>
+				<li><a href="{url app=wapproject}">随手捐</a></li>
+				<li><a href="{url app=waphuodong}">壹善日</a></li>
+			</ul>
+		</div>
+        
+		<div class="link hasub">
+			<span>【 我 】</span>
+			<ul>
+                <li><a href="{url app=wapuser&act=waplogout}">退出</a></li>
+				<li><a href="{url app=wapuser&act=user_index}">个人中心</a></li>
+				<li><a href="{url app=wapuser&act=add_goodman}">一善人</a></li>
+			</ul>
+		</div>	
+	</div>
+</div>
+
+<script type="text/javascript">
+$(".hasub").click(function(){
+	var sibing = $(this).siblings().children("ul");
+	var children = $(this).children("ul");	
+	if(sibing.hasClass("on")){
+		sibing.hide().removeClass("on");
+		}
+		else{
+		if (children.hasClass("on")){
+			children.hide().removeClass("on");
+			}
+			else{
+			children.show().addClass("on");
+			}
+			}
+	});
+	$("#show-info").click(function(){
+		$(this).hide(); 
+		$(".user-info").slideDown(300);		
+		});
+</script>
+
+
+</body>
+</html>
+

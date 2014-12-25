@@ -1,0 +1,44 @@
+{include file=wap/mobile.header.html}
+
+<!--fixed top -->
+<div class="fixed-top wrap">
+	<div class="title">卫良子莨</div>   
+</div>
+<!--fixed top / -->
+
+<div class="body wrap" ontouchmove="event.preventDefault()">
+	<div class="user-top">
+        <div class="photo"><img src="{res file=Images/mobile/photo.png}"/></div>
+		<div class="name">卫良子莨</div>
+		<div class="time">
+		  上次登录时间<br/>2014.12.19 11:48
+		</div>
+		<div class="bg-box wrap">
+            <img src="{res file=css/mobile/img/bg_user.png}" class="background"/>
+		</div>
+	</div>
+	<div class="user-main">
+		<ul class="clearfix">
+			<li>
+				<a href="{url app=wapuser&act=reg_records}">
+					<i class="icon icon_user_bmjl"></i> 
+					<span>报名记录</span>
+				</a>
+			</li>
+			<li>
+				<a href="{url app=wapuser&act=donation_records}">
+					<i class="icon icon_user_jzjl"></i> 
+					<span>捐赠记录</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="icon icon_user_jifen"></i> 
+					<span>积分值</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+{include file=wap/mobile.footer.html}
