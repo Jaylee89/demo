@@ -10,12 +10,13 @@
 
 	<ul class="ysr-list ssj-list">
         <!--{foreach from=$project_list item=project}-->
+        {$project.iamge}
 		<li>
 			<div class="padding40">
                 <a href="{url app=wapproject&act=show&id=$project.project_id}">	
 				<div class="img">
 					<img src="{$project.image}" />
-					<i class="icon icon_over"></i>
+                    <i class="icon icon_{$project.bm_status}"></i>
 				</div>
                 <h3>{$project.title}</h3>	
 				<div class="plan">
