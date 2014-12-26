@@ -43,8 +43,10 @@
                 <!--{if $huodong.status=='over'}-->
                 
                 报名已结束
+                <!--{elseif $check_signed}-->
+                已报名
                 <!--{else}-->
-                <a href="{url app=waphuodong&act=sign}">我要报名</a>
+                <a href="{url app=waphuodong&act=sign&hd_id=$huodong.hd_id}">我要报名</a>
                 <!--{/if}-->
             </div>
 		</div>	

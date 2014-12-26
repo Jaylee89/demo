@@ -1,0 +1,37 @@
+{include file=wap/mobile.header.html}
+<!--fixed top -->
+<div class="fixed-top wrap">
+	<div class="title">报名记录</div>
+	<div class="navbar userbar">
+		<div class="padding40">
+			<div class="webkit-box">
+                <div class="item">总共报名活动</div> <div class="item">{$sign_total}个</div>
+			</div>		
+		</div>
+	</div>   
+</div>
+<!--fixed top / -->
+
+<div class="body wrap">
+	<div class="padding40">
+		<ul class="user-list">
+            <!--{foreach from=$huodongs item=huodong_data}-->
+            <!--{foreach from=$huodong_data item=huodong}-->
+			<li class="clearfix">
+            <a href="{url app=waphuodong&act=show&id=$huodong.hd_id}">					
+                    <div class="img"><img src="{$huodong.thumb}" /></div>	
+					<div class="txt">
+                        <h3>{$huodong.title}</h3>
+                        <?php echo($huodongs['thumb']) ?>
+                        <p>活动时间：{$huodong.fromtime}-{$huodong.totime}</p>
+                        <p>活动地点：{$huodong.address}</p>
+					</div>					
+				</a>
+			</li>
+            <!--{/foreach}-->
+            <!--{/foreach}-->
+		</ul>
+	</div>
+</div>
+
+{include file=wap/mobile.footer.html}

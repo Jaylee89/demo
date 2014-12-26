@@ -23,8 +23,10 @@
 				<h2>报名信息</h2>
 				<div class="login">					
                     <form method="post">
-                        <div class="login-input"><input type="text" name="truename" value="姓名"/></div>
-                        <div class="login-input"><input type="text" name="phone" value="手机号码"/></div>
+                        <input type="hidden" name="post" value="1">
+                        <input type="hidden" name="huodong_id" value="{$hd_id}">
+                        <div class="login-input"><input type="text" name="truename" value="{if $user_msg}{$user_msg.real_name}{else}姓名{/if}"/></div>
+                        <div class="login-input"><input type="text" name="phone" value="{if $user_msg}{$user_msg.phone_mob}{else}手机号码{/if}"/></div>
                         <div class="login-btn"><button>确定</button></div>
                     </form>
 				</div>
@@ -34,9 +36,9 @@
 </div>
 <script type="text/javascript" charset="utf-8">
     $(function(){
-            $(".login-btn").click(function(){
-                window.location.href="index.php?app=waphuodong&act=sign";
-                });
+        $(".login-btn").click(function(){
+            window.location.href="index.php?app=waphuodong&act=sign";
+        });
     });
 </script>
 
