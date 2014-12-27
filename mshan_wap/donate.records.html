@@ -1,0 +1,47 @@
+{include file=wap/mobile.header.html}
+
+<!--fixed top -->
+<div class="fixed-top wrap">
+	<div class="title">捐赠记录</div>
+	<div class="navbar userbar">
+		<div class="padding40">
+			<div class="webkit-box">
+                <div class="item">总共捐赠金额</div> <div class="item" id="total">{$total}元</div>
+			</div>		
+		</div>
+	</div>   
+</div>
+<!--fixed top / -->
+
+<div class="body wrap">
+	<div class="padding40">
+		<ul class="user-list donate">
+            <!--{foreach from=$donate_user_msg item=donate}-->
+			<li class="clearfix">
+				<a href="javascript:void(0);" class="btn-pay" style="display:none">立即支付</a>
+                <a href="{url app=wapproject&act=show&id=$donate.item_id}">					
+					<div class="img"><img src="{$donate.project.image}" /></div>	
+					<div class="txt">
+                        <h3>{$donate.item_name}</h3>
+                        <p class="price"><strong>&yen;{$donate.amount}</strong>的捐助</p>
+                        <p class="succ clearfix"><span class="fl">{if $donate.finished_time}捐助成功{else}未完成支付{/if}</span> <?php echo date("Y.m.d {$donate.add_time}");?></p>
+					</div>					
+				</a>
+			</li>
+            <!--{/foreach}-->
+			<li class="clearfix fluff">
+				<a href="#" class="btn-pay">立即支付</a>
+				<a href="#">					
+					<div class="img"><img src="{res file=Images/mobile/pro-2.png}" /></div>	
+					<div class="txt">
+						<h3>公益版爸爸去哪儿啊</h3>
+						<p class="price"><strong>￥100.00</strong>的捐助</p>
+                        <p class="succ clearfix"><span class="fl">未完成支付</span> <?php echo date("Y.m.d {$}")?></p>
+					</div>					
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+{include file=wap/mobile.footer.html}
