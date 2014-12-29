@@ -18,9 +18,26 @@
 <div class="body wrap list-bd">
 	<div class="padding40">
 		<ul class="list-nav">
-			<li><a href="ysr-nav.html">全部状态</a></li>
-			<li><a href="#">进行中</a></li>
-			<li><a href="#">已结束</a></li>
+            <!--{if $condition=='category'}-->
+            <!--{foreach from=$hcategorys item=hcategory}-->
+            <li><a href="{url app=waphuodong&act=search&condition=status&cate_id=$hcategory.cate_id}">{$hcategory.cate_name}</a></li>
+            <!--{/foreach}-->
+            <!--{elseif $condition == 'area'}-->
+
+            <li><a href="{url app=waphuodong&act=search&area=440303}">罗湖</a></li>
+            <li><a href="{url app=waphuodong&act=search&area=440304}">福田</a></li>
+            <li><a href="{url app=waphuodong&act=search&area=440305}">南山</a></li>
+            <li><a href="{url app=waphuodong&act=search&area=440306}">宝安</a></li>
+            <li><a href="{url app=waphuodong&act=search&area=440307}">龙岗</a></li>
+            <li><a href="{url app=waphuodong&act=search&area=440308}">盐田</a></li>
+
+            <!--{else}-->
+
+            <li><a href="{url app=waphuodong&act=search&status=all}">全部状态</a></li>
+            <li><a href="{url app=waphuodong&act=search&status=ing}">进行中</a></li>
+            <li><a href="{url app=waphuodong&act=search&status=over}">已结束</a></li>
+
+            <!--{/if}-->
 		</ul>
 	</div>
 </div>

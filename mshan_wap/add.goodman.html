@@ -7,8 +7,8 @@
 
 <div class="body wrap">
 	<div class="user-top add-ysr">
-		<div class="photo"><img src="{res file=Images/mobile/photo.png}"/></div>
-		<div class="name">一善人</div>
+        <div class="photo"><img src="{if $isvolunteer}{$user.portrait}{else}{res file=Images/mobile/photo.png}{/if}"/></div>
+        <div class="name">{if $isvolunteer}{$user.real_name}{else}一善人{/if}</div>
 		<img src="{res file=css/mobile/img/bg_user.png}" class="add-ysr-bg"/>
 	</div>
 	
@@ -19,16 +19,21 @@
 			<div class="intro-bottom-bg"></div>
 		</div>
 		
-		<a href="javascript:void(0)" class="btn-add-ysr" id="show-info">加入一善人</a>
+        <!--{if $member_data['isvolunteer']}-->
+            <a href="javascript:void(0)" class="btn-add-ysr">我是一善人</a>
+        <!--{else}-->
+            <a href="javascript:void(0)" class="btn-add-ysr" id="show-info">加入一善人</a>
+        <!--{/if}-->
 		
 		<div class="user-info" style="display:none">
 			<h3>完善资料</h3>
-			<form action="">
+            <form  method="post">
+                <input type="hidden" name="post" value="1">
                 <table>
-                    <tr><td>姓名 <span>*</span></td><td><input type="text" /></td></tr>
-                    <tr><td>电话 <span>*</span></td><td><input type="text" /></td></tr>
-                    <tr><td>义工号</td><td><input type="text" /></td></tr>
-                    <tr><td>所在区</td><td><input type="text" /></td></tr>
+                    <tr><td>姓名 <span>*</span></td><td><input type="text" name="realname" value="{$user.real_name}" /></td></tr>
+                    <tr><td>电话 <span>*</span></td><td><input type="text" name="phone_mob" value="{$user.phone_mob}" /></td></tr>
+                    <tr><td>义工号</td><td><input type="text" name="outer_id" value="" /></td></tr>
+                    <tr><td>所在区</td><td><input type="text" name="region_name" value="{$user.region_name}" /></td></tr>
                     <tr><td colspan="2" class="font-sm"><span>*</span>为必填项</td></tr>
                     <tr><td colspan="2"><button type="submit" class="btn-add-ysr">加入一善人</button></td></tr>
                 </table>
@@ -36,5 +41,9 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript" charset="utf-8">
+$('form').submit(function(){
+        });
+</script>
 
 {include file=wap/mobile.footer.html}
