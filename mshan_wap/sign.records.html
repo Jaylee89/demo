@@ -15,6 +15,7 @@
 <div class="body wrap">
 	<div class="padding40">
 		<ul class="user-list">
+            <!--{if $huodongs}-->
             <!--{foreach from=$huodongs item=huodong_data}-->
             <!--{foreach from=$huodong_data item=huodong}-->
 			<li class="clearfix">
@@ -30,6 +31,9 @@
 			</li>
             <!--{/foreach}-->
             <!--{/foreach}-->
+            <!--{else}-->
+            您还没有报名记录
+            <!--{/if}-->
 		</ul>
 	</div>
 </div>
