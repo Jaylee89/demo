@@ -1,0 +1,10 @@
+/*
+ *  CSSÎÄ¼þ£ºwaterfall.css
+ */
+ 
+body{text-align:center;}
+/*Download by http://www.php100.com*/
+#stage{ margin:0 auto; padding:0; width:880px; }
+#stage li{ margin:0; padding:0; list-style:none;float:left; width:220px;}
+#stage li div{ font-size:12px; padding:10px; color:#999999; text-align:left; }
+ 
