@@ -25,7 +25,7 @@
 					<div class="txt">
                         <h3>{$donate.item_name}</h3>
                         <p class="price"><strong>&yen;{$donate.amount}</strong>的捐助</p>
-                        <p class="succ clearfix"><span class="fl">{if $donate.finished_time}捐助成功{else}未完成支付{/if}</span> <?php echo date("Y.m.d {$donate.add_time}");?></p>
+                        <p class="succ clearfix"><span class="fl">{if $donate.finished_time}捐助成功{else}未完成支付{/if}</span> {$donate.add_date}</p>
 					</div>					
 				</a>
 			</li>
