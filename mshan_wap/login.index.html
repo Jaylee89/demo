@@ -53,16 +53,14 @@
 
 <div class="body wrap">
 	<div class="login">
-		<form  id = 'waplogin_form' method="post">
-            <input type="hidden" name="ret_url" value="{$ret_url}">
+            <input type="hidden" id="ret_url" name="ret_url" value="{$ret_url}">
             <div class="photo"><img src="{res file=Images/mobile/photo.png}"/></div>
             <div class="login-input"><input type="text" id="user_name" placeholder="用户名" name="user_name" class="input_u" onfocus="if(this.value==this.defaultValue){this.value='';this.style.color='#333333';}"
                      onblur="if(this.value==''){this.value=this.defaultValue; this.style.color='#b8b8b8';}" 
                      onchange="javascript:validate_txt(this.value)"/></div>
             <div class="login-input"><input type="password" placeholder="********" id="password" name="password" class="input_k"/></div>
             <p id="waplogin-error"></p>
-            <div class="login-btn"><button>登录日行壹善</button></div>
-		</form>
+            <div class="login-btn"><button id="btnLogin" type="botton">登录日行壹善</button></div>
 	</div>
 </div>
 
@@ -80,7 +78,6 @@
 		<div class="link hasub">
 			<a href="javascript:void(0);">【 我 】</a>
 			<ul>
-                <li><a href="{url app=person&act=logout}">退出</a></li>
 				<li><a href="{url app=wapuser&act=user_index}">个人中心</a></li>
 				<li><a href="{url app=wapuser&act=add_goodman}">一善人</a></li>
 			</ul>
@@ -94,31 +91,50 @@
     $("input").focus();
 </script>
 <script type="text/javascript">
-$(".hasub").click(function(){
-	var sibing = $(this).siblings().children("ul");
-	var children = $(this).children("ul");	
-	if(sibing.hasClass("on")){
-		sibing.hide().removeClass("on");
+	$(".hasub").click(function(){
+		var sibing = $(this).siblings().children("ul");
+		var children = $(this).children("ul");	
+		if(sibing.hasClass("on")){
+			sibing.hide().removeClass("on");
 		}
 		else{
-		if (children.hasClass("on")){
+			if (children.hasClass("on")){
 			children.hide().removeClass("on");
 			}
 			else{
 			children.show().addClass("on");
 			}
-			}
+		}
 	});
 </script>
-<script type="text/javascript" charset="utf-8">
-$(function(){
-        $("#waplogin_form").validate(
-            errorPlacement: function(){
-                
-            }
-            );
-        });
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $("#btnLogin").click(function(){
+		var user_name = $("#user_name").val();
+		var password = $("#password").val();
+		var ret_url = $("#ret_url").val();
+		var datas = "user_name="+user_name+"&password="+password+"&ret_url="+ret_url;
+		var url = "{$site_url}/index.php?app=waplogin";		
+		$.ajax({
+			url: url,
+			data: datas,
+			type: 'post',
+			async: false,
+			cache: false,
+			dataType:"json",
+			success: function(result){
+				if(result.status==0) {
+					alert(result.info);
+				} else {
+					window.location.href=result.ret_url;		
+				}
+			},
+			error: function(){
+					
+			}
+		});
+	});
+});
 </script>
-
 </body>
 </html>
