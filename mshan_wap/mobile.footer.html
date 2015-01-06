@@ -3,21 +3,21 @@
 		<div class="back"><a href="javascript:history.back(-1)">&nbsp;</a></div>
         
         
-		<div class="link"><a href="{url app=wapxingshan}">每日行善</a></div>
+		<div class="link"><a href="{url app=wapxingshan}">每日善行</a></div>
 		<div class="link hasub">
 			<a href="javascript:void(0);">行善记事</a>
 			<ul>
+				<li><a href="{url app=waphuodong}">一善日</a></li>
 				<li><a href="{url app=wapproject}">随手捐</a></li>
-				<li><a href="{url app=waphuodong}">壹善日</a></li>
 			</ul>
 		</div>
         
         <div class="link hasub" >
 			<span>【 我 】</span>
 			<ul>
-                <li><a href="{url app=wapuser&act=waplogout}">退出</a></li>
-				<li><a href="{url app=wapuser&act=user_index}">个人中心</a></li>
-				<li><a href="{url app=wapuser&act=add_goodman}">一善人</a></li>
+                <li>{if $visitor.user_id}<a href="{url app=wapuser&act=waplogout}">退出{else}<a href="{url app=waplogin}">登陆{/if}</a></li>
+                <li><a href="{if $visitor.user_id}{url app=wapuser&act=user_index}{else}{url app=waplogin}{/if}">个人中心</a></li>
+                <li><a href="{if $visitor.user_id}{url app=wapuser&act=add_goodman}{else}{url app=waplogin}{/if}">一善人</a></li>
 			</ul>
 		</div>	
 	</div>

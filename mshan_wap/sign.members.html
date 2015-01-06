@@ -1,29 +1,15 @@
 {include file=wap/mobile.header.html}
 
 
-<!--fixed top -->
-<div class="fixed-top wrap" ontouchmove="event.preventDefault()">
-    <div class="title">{$huodong.title}</div>
-	<!--	
-	<div class="navbar listbar">		
-		<div class="webkit-box">
-			<div class="item">全部状态 <i class="icon icon_list_arrow"></i></div> 
-			<div class="item">全部分类 <i class="icon icon_list_arrow"></i></div>
-			<div class="item">全部地区 <i class="icon icon_list_arrow"></i></div>
-		</div>
-	</div>
-	-->   
-</div>
-<!--fixed top / -->
 
 <div class="body wrap detail">
 	<div class="cont">
 		<div class="padding40">
 			<div class="addinfo">
-				<h2>报名人员</h2>	
+                <h2>{$huodong.title}(报名人员,*为一善人)</h2>	
 				<ul class="participants clearfix">
                     <!--{foreach from=$sign_mem_msg item=member}-->
-                    <li><div class="photo-s"><img src="{$member[0].portrait}"/></div><p>{$member[0].user_name}</p></li>
+                    <li><div class="photo-s"><img src="{$member[0].portrait}"/></div><p>{$member[0].user_name}{if $member[0].isvolunteer}(*){else}{/if}</p></li>
                     <!--{/foreach}-->
 				</ul>
 			</div>

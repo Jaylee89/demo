@@ -1,7 +1,7 @@
 {include file=wap/mobile.header.html}
 
 <!--fixed top -->
-<div class="fixed-top wrap">
+<div class="fixed-top wrap" style="display:none">
 	<div class="title">随手捐</div> 
 </div>
 <!--fixed top / -->
@@ -18,9 +18,9 @@
 					<img src="{$project.image}" />
                     <i class="icon icon_{$project.bm_status}"></i>
 				</div>
-                <h3>{$project.title}</h3>	
+                <h3>{$project.title}{$project.percentage}</h3>	
 				<div class="plan">
-					<p style="width:48%;"></p>
+                    <p style="width:{$project.percentage};"></p>
 				</div>	
 				<div class="webkit-box">						
 					<div class="item">
@@ -31,7 +31,7 @@
                         <span class="much">&yen;{$project.target_money_ed}</span>
 						<div>捐赠金额</div>
 					</div>
-					<div class="item">
+					<div class="item" style="display:none">
                         <span class="much">{$project.attention}</span>
 						<div>关注人数</div>
 					</div>

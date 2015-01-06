@@ -46,7 +46,7 @@
 <body class="wrap">
 
 <!--fixed top -->
-<div class="fixed-top wrap" >
+<div class="fixed-top wrap" style="display:none">
 	<div class="title">登录</div>   
 </div>
 <!--fixed top / -->
@@ -58,33 +58,33 @@
             <div class="login-input"><input type="text" id="user_name" placeholder="用户名" name="user_name" class="input_u" onfocus="if(this.value==this.defaultValue){this.value='';this.style.color='#333333';}"
                      onblur="if(this.value==''){this.value=this.defaultValue; this.style.color='#b8b8b8';}" 
                      onchange="javascript:validate_txt(this.value)"/></div>
-            <div class="login-input"><input type="password" placeholder="********" id="password" name="password" class="input_k"/></div>
+            <div class="login-input"><input type="password" placeholder="密码" id="password" name="password" class="input_k"/></div>
             <p id="waplogin-error"></p>
-            <div class="login-btn"><button id="btnLogin" type="botton">登录日行壹善</button></div>
+            <div class="login-btn"><button id="btnLogin" type="botton">登录日行一善</button></div>
 	</div>
 </div>
 
 <div class="fixed-bottom">
 	<div class="menu">		
 		<div class="back"></div>
-		<div class="link"><a href="{url app=wapxingshan}">每日行善</a></div>
+		<div class="link"><a href="{url app=wapxingshan}">每日善行</a></div>
 		<div class="link hasub">
 			<a href="javascript:void(0);">行善记事</a>
 			<ul>
+				<li><a href="{url app=waphuodong}">一善日</a></li>
 				<li><a href="{url app=wapproject}">随手捐</a></li>
-				<li><a href="{url app=waphuodong}">壹善日</a></li>
 			</ul>
 		</div>
 		<div class="link hasub">
 			<a href="javascript:void(0);">【 我 】</a>
 			<ul>
-				<li><a href="{url app=wapuser&act=user_index}">个人中心</a></li>
-				<li><a href="{url app=wapuser&act=add_goodman}">一善人</a></li>
+                <li><a href="{if $visitor.user_id}{url app=wapuser&act=user_index}{else}{url app=waplogin}{/if}">个人中心</a></li>
+                <li><a href="{if $visitor.user_id}{url app=wapuser&act=add_goodman}{else}{url app=waplogin}{/if}">一善人</a></li>
 			</ul>
 		</div>	
 	</div>
 </div>
-<div class="bg-box wrap">} <img src="{res file=css/mobile/img/bg_user.png}" class="background"/> </div>
+<div class="bg-box wrap"> <img src="{res file=css/mobile/img/bg_user.png}" class="background"/> </div>
 
 <script type="text/javascript">
     // Type1 : 直接触发 input 的 focus 事件

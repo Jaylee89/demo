@@ -2,11 +2,11 @@
 
 <!--fixed top -->
 <div class="fixed-top wrap">
-	<div class="title">捐赠记录</div>
+	<div class="title" style="display:none">捐赠记录</div>
 	<div class="navbar userbar">
 		<div class="padding40">
 			<div class="webkit-box">
-                <div class="item">总共捐赠金额</div> <div class="item" id="total">{$total}元</div>
+                <div class="item">总共捐赠金额</div> <div class="item" id="total">{if $total}{$total}{else}0.00{/if}元</div>
 			</div>		
 		</div>
 	</div>   

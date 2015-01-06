@@ -2,7 +2,7 @@
 
 <!--fixed top -->
 <div class="fixed-top wrap">
-	<div class="title">壹善日</div>
+	<div class="title" style="display:none">一善日</div>
 	<div class="navbar listbar">
 		<div class="webkit-box">
 			<div class="item"><a href="{url app=waphuodong&act=search&condition=status}">全部状态 <i class="icon icon_list_arrow"></i></a></div>
@@ -28,9 +28,9 @@
                     <i class="icon icon_{$huodong.icon}"></i>
 				</div>	
 				<div class="txt">						
-                    <p>时间：{$huodong.fromtime}-{$huodong.totime}</p>
-                    <p>地点：{$huodong.address}</p>
-                    <p>发起：{$huodong.creator}</p>
+                    <p><strong>时间</strong>：{$huodong.fromtime}-{$huodong.totime}</p>
+                    <p><strong>地点</strong>：{$huodong.address}</p>
+                    <p><strong>发起</strong>：{$huodong.creator}</p>
                     <p>已有<span>{$huodong.count_sign}</span>人报名</p>
 				</div>					
 			</a>
