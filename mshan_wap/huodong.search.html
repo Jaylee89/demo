@@ -1,13 +1,55 @@
 {include file=wap/mobile.header.html}
 
+<style>	
+    .item{ position:relative; z-index:3;}
+    .subnav { display:none; position:absolute; left:-1px; padding-left:1px; top:70px; background:#DF3333; z-index:999999; width:100%; text-align:center; max-height:400px; overflow-y:auto;overflow-x:hidden;}
+    .subnav li{ padding-left:0px;}
+    .fixed-top.wrap{ overflow:visible;}
+    .body{ top:0;}
+</style>
 <!--fixed top -->
 <div class="fixed-top wrap">
 	<div class="title" style="display:none">一善日</div>
 	<div class="navbar listbar">
 		<div class="webkit-box">
-			<div class="item"><a href="{url app=waphuodong&act=search&condition=status}">全部状态 <i class="icon icon_list_arrow"></i></a></div>
-            <div class="item"><a href="{url app=waphuodong&act=search&condition=category}">全部分类 <i class="icon icon_list_arrow"></i></a></div>
-            <div class="item"><a href="{url app=waphuodong&act=search&condition=area}">全部地区 <i class="icon icon_list_arrow"></i></div>
+
+			<div class="item">
+				<a href="javascript:void(0);" onclick="as(this)">全部状态 <i class="icon icon_list_arrow"></i>
+                </a>
+
+				<div class="subnav">
+					<ul >
+                        <li><a href="{url app=waphuodong&act=search&status=all}">全部状态</a></li>
+                        <li><a href="{url app=waphuodong&act=search&status=ing}">进行中</a></li>
+                        <li><a href="{url app=waphuodong&act=search&status=over}">已结束</a></li>
+					</ul>
+				</div>
+            </div>
+		
+			<div class="item">
+				<a href="javascript:void(0);" onclick="as(this)">全部分类 <i class="icon icon_list_arrow"></i></a>
+				<div class="subnav">
+					<ul>
+                        <!--{foreach from=$hcategorys item=hcategory}-->
+                        <li><a href="{url app=waphuodong&act=search&condition=status&cate_id=$hcategory.cate_id}">{$hcategory.cate_name}</a></li>
+                        <!--{/foreach}-->
+					</ul>
+				</div>
+			</div>
+			<div class="item">
+				<a href="javascript:void(0);" onclick="as(this)">全部地区 <i class="icon icon_list_arrow"></i></a>
+				<div class="subnav">
+					<ul>
+                        <li><a href="{url app=waphuodong&act=search&area=440303}">罗湖</a></li>
+                        <li><a href="{url app=waphuodong&act=search&area=440304}">福田</a></li>
+                        <li><a href="{url app=waphuodong&act=search&area=440305}">南山</a></li>
+                        <li><a href="{url app=waphuodong&act=search&area=440306}">宝安</a></li>
+                        <li><a href="{url app=waphuodong&act=search&area=440307}">龙岗</a></li>
+                        <li><a href="{url app=waphuodong&act=search&area=440308}">盐田</a></li>
+					</ul>
+				</div>
+			</div>
+		
 		
 		</div>
 	
@@ -18,6 +60,7 @@
 <div class="body wrap list-bd">
 
 	<ul class="ysr-list">
+        <!--{if $huodongs}-->
         <!--{foreach from=$huodongs item=huodong}-->
 		<li>
 			<div class="padding40">
@@ -37,7 +80,15 @@
 			</div>
 		</li>
         <!--{/foreach}-->
+        <!--{else}-->
+        0.0没有哦
+        <!--{/if}-->
 	</ul>
 </div>
+<script type="text/javascript" charset="utf-8">
+function as(e){
+    $(e).next().slideToggle('fast');
+}
+</script>
 
 {include file=wap/mobile.footer.html}

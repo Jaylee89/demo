@@ -184,3 +184,8 @@ JSbeauty反压缩js代码, css用DW左侧源代码格式反解压
 ===============
 这个人，写的不错:程序员接私活经验谈。(MobiLink数据同步)
 http://www.cnblogs.com/txw1958/archive/2012/11/06/programmer-personal-work.html
+
+2015-1-8
+============
+choetech小刘，能找出不少的问题。这些问题我之前都没想到。。。。。。
+写的时候，程序的健壮性考虑得不周到。
