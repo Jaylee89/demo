@@ -203,3 +203,8 @@ choetech小刘，能找出不少的问题。这些问题我之前都没想到。
 解绑，切换账号并没在需求内。但非常必要了解。
 下一步：瀑布流bug修正及微信支付。重头戏是微信支付。
 今天见识了一个很简短的瀑布流代码。
+    
+
+        当$(window).scroll(alert("mm")); 在微信端和手机端不起作用时，从stackoverflow发现有这个解决办法:
+
+        以$(window).on('scroll mousewheel DOMMouseScroll touchmove',function(){alert("mm")};替代 之前jquery版本用的live绑定->jquery-1.11.1.min.js中改成了on绑定了
