@@ -7,10 +7,12 @@ $(function(){
  
  //这里就要进行计算滚动条当前所在的位置了。如果滚动条离最底部还有100px的时候就要进行调用ajax加载数据
  $(window).scroll(function(){    
+     alert("mmm");
      //此方法是在滚动条滚动时发生的函数
      // 当滚动到最底部以上100像素时，加载新内容
      var $doc_height,$s_top,$now_height;
      $doc_height = $(document).height();        //这里是document的整个高度
+     //alert($doc_height);
      $s_top = $(this).scrollTop();            //当前滚动条离最顶上多少高度
      $now_height = $(this).height();            //这里的this 也是就是window对象
      if(($doc_height - $s_top - $now_height) < 100) jsonajax();    
