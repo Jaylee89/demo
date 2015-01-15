@@ -208,3 +208,24 @@ choetech小刘，能找出不少的问题。这些问题我之前都没想到。
         当$(window).scroll(alert("mm")); 在微信端和手机端不起作用时，从stackoverflow发现有这个解决办法:
 
         以$(window).on('scroll mousewheel DOMMouseScroll touchmove',function(){alert("mm")};替代 之前jquery版本用的live绑定->jquery-1.11.1.min.js中改成了on绑定了
+
+
+2015-01-15
+====================
+(1)choetech产品重定向页面，修改amazon购买链接默认为第一个。
+
+                        $(".btn-gobuy").click(function() {
+
+                            var url = $(this).attr("url");
+
+                            var oCountryBox = $(".country-box");
+
+                            var def_url = oCountryBox.children('input:first-child').val();
+
+                            url = url ? url : def_url;
+
+                            //if(url=="") return false;
+                            window.open(url);
+
+                        });
+
