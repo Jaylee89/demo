@@ -229,3 +229,22 @@ choetech小刘，能找出不少的问题。这些问题我之前都没想到。
 
                         });
 
+(2)获取子节点第一个input  : $(".btn-bobuy").children("input:first-child");
+(3)js中数组操作：
+    array.push()压入
+    array.slice()截取
+
+(4)同颜色切换问题已经解决。动用动态CLASS,获取同颜色的图片为一组。
+$(".fancybox").click(function(){
+    var oColor = $(this).children("input").val();
+    var oFancyBox = $(".fancybox-"+oColor);
+    oFancyBox.fancybox();
+    //$(this).parent(".fancybox").fancybox();
+});
+(5)就差一个选中图片后的重新正确排序了。
+
+2015-01-15
+====================
+choetech图片的做法真是。。。。。。。，
+面包屑一样的代码。
+差距很大。
