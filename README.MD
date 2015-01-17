@@ -248,3 +248,16 @@ $(".fancybox").click(function(){
 choetech图片的做法真是。。。。。。。，
 面包屑一样的代码。
 差距很大。
+
+2015-01-17
+===========
+(1)AMD/CMD
+a. AMD 
+    Asynchronous Module Definition异步模块定义, 所有的模块将被异步加载，模块加载不影响后面语句运行。所有依赖某些模块的语句均放置在回调函数中。 
+
+b. CMD 
+    在CMD中，一个模块就是一个文件，格式为：
+    define( factory );
+
+(2)微信支付
+    php版本
