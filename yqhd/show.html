@@ -1,0 +1,163 @@
+<script type="text/javascript" charset="utf-8">
+    function Dcheck(){
+        var val;
+        var reg;
+        if (Dd('org_name').value =='') {
+            confirm('主办单位没填写');
+            Df('org_name');
+            return false;
+        };
+        
+        if(Dd('first_name').value == '') {
+            confirm('第一联系人没填写!');
+            Df('first_name');
+            return false;
+        };
+
+        val = Dd('first_telephone').value;
+        reg = /^1[3|4|5|8]{1}[0-9]{9}$/;
+        if (!reg.test(val)) {
+            confirm('电话格式错误');
+            Df('first_telephone');
+            return false;
+        };
+
+        val = Dd('first_email').value;
+        reg = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
+        if (!reg.test(val)) {
+            confirm('邮箱格式错误!');
+            Df('first_email');
+            return false;
+        };
+        
+           //第二联系人
+        val = Dd('second_telephone').value;
+        reg = /^1[3|4|5|8]{1}[0-9]{9}$/;
+        if (!reg.test(val)) {
+            confirm('电话格式错误');
+            Dd('second_telephone').focus();
+            return false;
+        }else{
+            if($('#first_telephone').val() == $('#second_telephone').val()){
+                confirm('第二联系人手机不能与第一联系人手机相同');
+                $('#second_telephone').focus();
+                return false;
+            };
+        }
+
+        val = Dd('second_email').value;
+        reg = /^[\w\-\.]+@[\w\-\.]+(\.\w+)+$/;
+        if (!reg.test(val)) {
+            confirm('邮箱格式错误!');
+            Dd('second_email').focus();
+            return false;
+        }else{
+            if($('#first_email').val() == $("#second_email").val())
+                confirm('请输入不同于第一联系人的邮箱');
+                $('#second_email').focus();
+                return false;
+        }
+
+        if(!is_check('theme')) return false;  //主题
+
+       //参与人数
+        if(Dd('estimate_number').value == ''){
+            confirm('预计参与人数没填写!');
+            Df('estimate_number');
+            return false;
+        }else{
+            val = Dd('estimate_number').value;
+            reg = /^[1-9]\d*$/;
+            if(!reg.test(val)){
+                confirm('人数应为整数!');
+                Df('estimate_number');
+                return false;
+            }
+        }
+
+        //活动时间
+        if (Dd('activity_time').value=='') {
+            confirm('活动时间忘了填额!');
+            Df('activity_time');
+            return false;
+        };
+
+        //流程及出席嘉宾
+        var $act_flow = $("#activity_flow");
+        var af_val = $act_flow.val();
+        //alert(af_val);
+
+        if(!check_null(af_val)){
+            alert('活动流程为空!');
+            $act_flow.focus();
+            return false;
+        };
+
+        //活动目的及收益人群
+        var $pur_ben = $("#purpose_benefit");
+        var pb_val = $($pur_ben).val();
+        if (!check_null(pb_val)) {
+            confirm('活动目的为空!');
+            $pur_ben.focus();
+            return false;
+        };
+
+
+        return true;
+    }
+
+    function check_null(obj){
+        obj = obj.replace(/\ +/g, "");
+        obj = obj.replace(/[ ]/g, "");
+        obj = obj.replace(/[\r\n]/g, "");
+        if (obj !== '') {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    //判断是否选中主题
+    function is_check(checkName){
+        var checkNames = document.getElementsByName(checkName);
+        var flags = false;
+        for (var i = 0; i < checkNames.length; i++) {
+            if (checkNames[i].checked) {
+                flags = true;
+                break;
+            }
+        }   
+
+        if (!flags) {
+            confirm('请选择至少一种主题!');
+            return false;
+        }else{
+            return true;
+        }
+
+    }
+
+    $(document).ready(function(){
+        $("#org_name").focus();
+        $("#confirm_apply").click(function(){
+            if(!Dcheck()) return false;
+            venueApply();//提交申请
+        });
+    });
+
+    function venueApply(){
+        var para = $("#venueApplyForm").serialize();
+        var ajax_url = "book.php";
+
+        $.ajax({
+            url: ajax_url,
+            data: para,
+            dataType: "json",
+            type: "post",
+            success: function(result){
+                alert(result);
+            }
+        });
+    }
+
+</script>
