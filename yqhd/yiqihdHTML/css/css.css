@@ -1,0 +1,41 @@
+
+#playBox {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#playBox .oUlplay {
+	width:99999px;
+	position:absolute;
+	left: 0;
+	top: 0;
+}
+#playBox .oUlplay li {
+	float: left;
+
+}
+#playBox .oUlplay li img{
+	width:100%;
+	display:block;
+}
+#playBox .pre {
+	cursor: pointer;
+	width: 45px;
+	height: 45px;
+	background: url(img/l.png) no-repeat;
+	position: absolute;
+	top: 190px;
+	left: 10px;
+	z-index: 10;
+}
+#playBox .next {
+	cursor: pointer;
+	width: 45px;
+	height: 45px;
+	background: url(../images/r.png) no-repeat;
+	position: absolute;
+	top: 190px;
+	right: 10px;
+	z-index: 10;
+}
+
