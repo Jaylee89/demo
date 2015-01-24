@@ -1,0 +1,17 @@
+<script type="text/javascript" charset="utf-8">
+        $.ajax({
+            url: ajax_url,
+            data: para,
+            dataType: "json",
+            type: "post",
+            success: function(result){
+                confirm(result.info);
+                if (result.status == 1) {
+					parent.location.href = "{$MODULE[2][linkurl]}trade.php?action=order";
+                } else {
+                	confirm("申请失败");
+                    window.close();
+				}
+            }
+        });
+</script>
