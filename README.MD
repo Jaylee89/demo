@@ -1,8 +1,9 @@
 2015-01-26
 ==================
-php序列化数组反序列化可以直接存取数组,非常方便
+(1)php序列化数组反序列化可以直接存取数组,非常方便
 serialize($array)
 unserialize($array)
+(2)checkbox, radio,select表单选项，disabled, readonly,(disabled会禁止提交数据)
 
 2014-01-19
 =================
