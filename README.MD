@@ -4,6 +4,9 @@ zepto.js 与jquery很相似。
 $("#id").bind('click', fucntion(e){
     alert(e);
     });
+
+注意：
+    ajax的data组装方式：data: datas;  (var datas = "username='chen'&password="+password)
 2015-01-26
 ==================
 (1)php序列化数组反序列化可以直接存取数组,非常方便
