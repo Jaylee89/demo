@@ -1,3 +1,8 @@
+2015-02-02
+=====================
+101个mysql调节和优化
+http://www.linuxeden.com/html/database/20150121/158558.html
+
 2015-01-30
 ======================
 (1)yiqihd的show页面:layer的ajax返回别用json格式，
