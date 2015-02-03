@@ -4,6 +4,7 @@
     手机端垂直方向不可以拉动时，找到此元素外层（如div）添加以下css
     overflow-x: hidden;
     overflow-y: auto;
+(2) <button type="button"></button> 按钮类型一定要设置type=button，否则不指定action值的情况下，刷新当前页，ajax调用时将直接携带所有serialize()格式化的数据跳转，造成不必要的问题。
 
 2015-02-02
 =====================
