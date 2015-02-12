@@ -4,7 +4,7 @@
 
 b.js_api_call.php里面的第91行js有错: if (typeof WeixinJSBridge == "undefined")  ->  if (typeof('WeixinJSBridge') == "undefined")
 
-(2) 
+(2) ecmall的real_ip可以获取当前用户ip，用于注册再好不过
 2015-02-07
 =================
 (1)js事件触发事件，用于壹起网非单独登陆页下需要身份验证的判断。
