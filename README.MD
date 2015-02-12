@@ -1,3 +1,10 @@
+2015-02-12
+-----------------
+(1)a.微信支付php版jsAPI，公共类155,821行CURLOP_TIMEOUT-> CURLOPT_TIMEOUT
+
+b.js_api_call.php里面的第91行js有错: if (typeof WeixinJSBridge == "undefined")  ->  if (typeof('WeixinJSBridge') == "undefined")
+
+(2) 
 2015-02-07
 =================
 (1)js事件触发事件，用于壹起网非单独登陆页下需要身份验证的判断。
