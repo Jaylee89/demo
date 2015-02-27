@@ -1,3 +1,8 @@
+2015-02-27
+-----------------
+用PHP实现弹出消息提示框的两种方法
+a.echo "<script>alert('提示内容')</script>";
+b.echo '<script language="JavaScript">;alert("这是";location.href="index.htm";</script>;';
 2015-02-25
 -----------------
 新年计划：
