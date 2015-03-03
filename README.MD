@@ -7,20 +7,29 @@ http://61.19.1.116/ 长城，你发现我了么？求你把我也屏蔽了。
 2015-02-27
 -----------------
 用PHP实现弹出消息提示框的两种方法
-a.echo "<script>alert('提示内容')</script>";
-b.echo '<script language="JavaScript">;alert("这是";location.href="index.htm";</script>;';
+a.echo <script>alert("提示内容")</script>;
+b.echo <script language="JavaScript">;alert("这是";location.href="index.htm";</script>;;
 2015-02-25
 -----------------
 新年计划：
     (1)bootstrap用于实战
+
     (2)git开始用于项目开发
+
     (3)laravel4开发一个网站
+
     (4)phalcon开发一个网站， 并作为自己博客网站的php框架
+
     (5)linux服务器
+
     (6)c入门课程学完
+
     (7)微信支付
+
     (8)数据结构与算法分析，做完习题
+
     (9)手机网站
+
 
 ---------------------------
 如何重新安排一周计划？
@@ -124,11 +133,15 @@ b.echo '<script language="JavaScript">;alert("这是";location.href="index.htm";
 2015-02-12
 -----------------
 (1)a.微信支付php版jsAPI，公共类155,821行CURLOP_TIMEOUT-> CURLOPT_TIMEOUT;
+
 (1-1) 公共类里171,175行重复;
+
 
 b.js_api_call.php里面的第91行js有错: if (typeof WeixinJSBridge == "undefined")  ->  if (typeof('WeixinJSBridge') == "undefined")
 
+
 (2) ecmall的real_ip可以获取当前用户ip，用于注册再好不过
+
 2015-02-07
 =================
 (1)js事件触发事件，用于壹起网非单独登陆页下需要身份验证的判断。
