@@ -265,7 +265,7 @@ class Wxpay_client_pub extends Common_util_pub
 	 */
 	function createXml()
 	{
-	   	$this->parameters["appid"] = WxPayConf_pub::APPID;//公众账号ID
+	   	$this->parameters["appId"] = WxPayConf_pub::APPID;//公众账号ID
 	   	$this->parameters["mch_id"] = WxPayConf_pub::MCHID;//商户号
 	    $this->parameters["nonce_str"] = $this->createNoncestr();//随机字符串
 	    $this->parameters["sign"] = $this->getSign($this->parameters);//签名
@@ -340,7 +340,7 @@ class UnifiedOrder_pub extends Wxpay_client_pub
 				$this->parameters["openid"] == NULL){
 				throw new SDKRuntimeException("统一支付接口中，缺少必填参数openid！trade_type为JSAPI时，openid为必填参数！"."<br>");
 			}
-		   	$this->parameters["appid"] = WxPayConf_pub::APPID;//公众账号ID
+		   	$this->parameters["appId"] = WxPayConf_pub::APPID;//公众账号ID
 		   	$this->parameters["mch_id"] = WxPayConf_pub::MCHID;//商户号
 		   	$this->parameters["spbill_create_ip"] = $_SERVER['REMOTE_ADDR'];//终端ip	    
 		    $this->parameters["nonce_str"] = $this->createNoncestr();//随机字符串
@@ -391,7 +391,7 @@ class OrderQuery_pub extends Wxpay_client_pub
 			{
 				throw new SDKRuntimeException("订单查询接口中，out_trade_no、transaction_id至少填一个！"."<br>");
 			}
-		   	$this->parameters["appid"] = WxPayConf_pub::APPID;//公众账号ID
+		   	$this->parameters["appId"] = WxPayConf_pub::appId;//公众账号ID
 		   	$this->parameters["mch_id"] = WxPayConf_pub::MCHID;//商户号
 		    $this->parameters["nonce_str"] = $this->createNoncestr();//随机字符串
 		    $this->parameters["sign"] = $this->getSign($this->parameters);//签名
@@ -436,7 +436,7 @@ class Refund_pub extends Wxpay_client_pub
 			}elseif($this->parameters["op_user_id"] == null){
 				throw new SDKRuntimeException("退款申请接口中，缺少必填参数op_user_id！"."<br>");
 			}
-		   	$this->parameters["appid"] = WxPayConf_pub::APPID;//公众账号ID
+		   	$this->parameters["appId"] = WxPayConf_pub::appId;//公众账号ID
 		   	$this->parameters["mch_id"] = WxPayConf_pub::MCHID;//商户号
 		    $this->parameters["nonce_str"] = $this->createNoncestr();//随机字符串
 		    $this->parameters["sign"] = $this->getSign($this->parameters);//签名
