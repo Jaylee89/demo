@@ -1,4 +1,16 @@
-2015-03-08
+2015-03-09
+--------------
+微信支付php版demo中的问题：
+
+1) WxPayPubHelper.php中，postXmlCurl函数，curl_close($ch)执行了多次，第二次执行的时候出错了。(应该)
+
+2) WxPayPubHelper.php中，getShortUrl获取postXML数据后，需要对返回值做判断，然后再取值，否则抛异常（新发现）
+
+3) WxPayPubHelper.php中，postXmlCurl函数 CURLOP_TIMEOUT修改成CURLOPT_TIMEOUT（已改）
+
+4) phpdemo中checksign()添加判断returncode的逻辑(新发现)
+
+2015-03-09
 ---------------
 (1) http://www.sitepoint.com/whats-best-programming-language-learn-2015/ 2015年前景。就像结尾说的：don't worry about your choices:just build something!
 2015-03-07
