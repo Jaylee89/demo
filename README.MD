@@ -1,7 +1,12 @@
+2015-03-08
+---------------
+(1) http://www.sitepoint.com/whats-best-programming-language-learn-2015/ 2015年前景。就像结尾说的：don't worry about your choices:just build something!
 2015-03-07
 ---------------
 (1)phalcon开发例子
 (2)开始用phalcon框架进行开发。
+(3) hasMany(1-n), hasOne(1-1), belongTo(n-1), hasManyToMany(n-n)
+(4)事务处理挺难的
 2015-03-06
 ---------------
 (1) 微信的几十个api
