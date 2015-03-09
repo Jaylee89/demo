@@ -1,6 +1,6 @@
 2015-03-09
 --------------
-微信支付php版demo中的问题：
+a: 微信支付php版demo中的问题：
 
 1) WxPayPubHelper.php中，postXmlCurl函数，curl_close($ch)执行了多次，第二次执行的时候出错了。(应该)
 
@@ -9,6 +9,7 @@
 3) WxPayPubHelper.php中，postXmlCurl函数 CURLOP_TIMEOUT修改成CURLOPT_TIMEOUT（已改）
 
 4) phpdemo中checksign()添加判断returncode的逻辑(新发现)
+b: 微信支付最难的就是获取预支付id (prepay_id)
 
 2015-03-09
 ---------------
