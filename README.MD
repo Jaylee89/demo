@@ -1,11 +1,17 @@
+
 2015-03-10
 --------------
 (1) 网站并发压力测试
+
     a) windows上测试并发量在apache的bin目录下ab.exe -n100 -c10 http://www.baidu.com/
 
     b) linux下直接./ab -n100 -c10 http://www.baidu.com/
+
 (2) 微信支付最新文档 http://wxpay.weixin.qq.com/api/index.html
+
 (3)微信核心类中，注意前面所有请求的appid都是小写，最后一个获取pamameters时,需要大写appId!
+
+(4)微信支付通过，重新上传了一个 github.com/chenyangguang/WXPay.git
 2015-03-09
 --------------
 a: 微信支付php版demo中的问题：
