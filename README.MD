@@ -1,3 +1,8 @@
+2015-03-10
+--------------
+windows上测试并发量在apache的bin目录下ab.exe -n100 -c10 http://www.baidu.com/
+
+linux下直接./ab -n100 -c10 http://www.baidu.com/
 2015-03-09
 --------------
 a: 微信支付php版demo中的问题：
