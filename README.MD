@@ -1,3 +1,7 @@
+2015-03-12
+-------------
+PhalconOperationPriciple.md 讲的是 Phalcon Framework的MVC结构及启动流程分析,先收起来，简单看了一遍，对phalcon的理解深刻了许多
+原地址： http://www.ituring.com.cn/article/113735
 2015-03-11
 -------------
 (1)dirname(__FILE__) 定义项目根路径， 再往上一级，多加dirname, 即dirname(dirname(__FILE__)) , 以此类推。
