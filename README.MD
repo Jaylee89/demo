@@ -1,6 +1,10 @@
+2015-03-17
+-------------
+今天在知乎上发现一个叫余弦的黑客： 这里是他的博客及兵器谱http://evilcos.me/?p=336
 2015-03-13
 -------------
 认准一个项目，耐心，认真，细心，竭尽所能完成。
+Nosql == Not only SQL
 2015-03-12
 -------------
 PhalconOperationPriciple.md 讲的是 Phalcon Framework的MVC结构及启动流程分析,先收起来，简单看了一遍，对phalcon的理解深刻了许多
