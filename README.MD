@@ -1,3 +1,9 @@
+2015-03-20
+-------------
+(1)点击andriod手机回退键下，检测支付成功后的回退显示，微信浏览器取消缓存设置
+header("Cache-control:no-cache,no-store,must-revalidate");
+header("Pragma:no-cache");
+header("Expires:0");
 2015-03-18
 -------------
 (1)数据库设计范式
