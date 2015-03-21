@@ -1,6 +1,13 @@
+20150-03-21(2)
+==============
+others/javascript_click.html里的文件说明
+函数不能写在$(function(){
+    
+    ****function aaa(){} *****  //这里不能写函数, html里面调用不到这里的函数， chrome会报错：Resource interpreted as Script but transferred with MIME type application/x-js: 
+    });
+第二次了！
 20150-03-21
 ==============
-
 闭包基本写法： (function(){do something}() //定义一个匿名函数并立即执行
 javascript里面的闭包概念： 就是函数用到外部变量，不需要传参就可以获取
 jquery闭包： (function(cssrain){cssrain("div p").click(...);})(jQuery)
