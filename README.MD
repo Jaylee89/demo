@@ -1,11 +1,22 @@
 20150-03-21(2)
 ==============
-others/javascript_click.html里的文件说明
-函数不能写在$(function(){
-    
-    ****function aaa(){} *****  //这里不能写函数, html里面调用不到这里的函数， chrome会报错：Resource interpreted as Script but transferred with MIME type application/x-js: 
-    });
-第二次了！
+a. 
+    others/javascript_click.html里的文件说明
+    函数不能写在$(function(){
+        
+        ****function aaa(){} *****  //这里不能写函数, html里面调用不到这里的函数， chrome会报错：Resource interpreted as Script but transferred with MIME type application/x-js: 
+        });
+    第二次了！
+b.
+    array_slice();
+    定义和用法
+
+    array_slice() 函数在数组中根据条件取出一段值，并返回。
+
+    注释：如果数组有字符串键，所返回的数组将保留键名。
+
+    语法: array_slice(array,offset,length,preserve)
+
 20150-03-21
 ==============
 闭包基本写法： (function(){do something}() //定义一个匿名函数并立即执行
