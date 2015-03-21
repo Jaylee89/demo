@@ -1,3 +1,12 @@
+20150-03-21
+==============
+
+闭包基本写法： (function(){do something}() //定义一个匿名函数并立即执行
+javascript里面的闭包概念： 就是函数用到外部变量，不需要传参就可以获取
+jquery闭包： (function(cssrain){cssrain("div p").click(...);})(jQuery)
+
+带参数： (function(形参){do somethin})(实参)
+
 2015-03-20
 -------------
 (1)点击andriod手机回退键下，检测支付成功后的回退显示，微信浏览器取消缓存设置
