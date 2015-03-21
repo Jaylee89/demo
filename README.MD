@@ -17,6 +17,7 @@ b.
 
     语法: array_slice(array,offset,length,preserve)
 
+c. settimeout(function(), 1000)与 setInterval(function(), 1000)是什么关系?js中执行的时间是怎么样的? http://ejohn.org/blog/how-javascript-timers-work/
 20150-03-21
 ==============
 闭包基本写法： (function(){do something}() //定义一个匿名函数并立即执行
