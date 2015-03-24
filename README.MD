@@ -1,3 +1,6 @@
+2015-0324
+-------------
+安卓手机重启陷入死循环，开不了机。只好拔掉电源，装上，按住音量减少键和电源键。进入HBOOT, 等，点击wipe data/factory reset 选yes, 完了点击wipe cache partition ，完了，点击重启指令
 2015-03-23
 --------------
 a. jquery有一个.eq()的函数，取对应的索引的节点, 例子，$("ul li").eq(index).addClass('on');
