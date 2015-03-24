@@ -1,6 +1,11 @@
 2015-0324
 -------------
-安卓手机重启陷入死循环，开不了机。只好拔掉电源，装上，按住音量减少键和电源键。进入HBOOT, 等，点击wipe data/factory reset 选yes, 完了点击wipe cache partition ，完了，点击重启指令
+(1)安卓手机重启陷入死循环，开不了机。只好拔掉电源，装上，按住音量减少键和电源键。进入HBOOT, 等，点击wipe data/factory reset 选yes, 完了点击wipe cache partition ，完了，点击重启指令 ->ok了， 重新下载需要的软件，速度快多了
+
+(2)条件的高级分离： 
+由于 PHP 解释器会在条件未达成时直接跳过该段条件语句块，因此 PHP 会根据条件来忽略之。要输出大段文本时，跳出 PHP 解析模式通常比将文本通过 echo 或 print 输出更有效率。 
+(3)整数溢出：如果给定的一个数超出了 integer 的范围，将会被解释为 float。同样如果执行的运算结果超出了 integer 范围，也会返回 float。 
+
 2015-03-23
 --------------
 a. jquery有一个.eq()的函数，取对应的索引的节点, 例子，$("ul li").eq(index).addClass('on');
