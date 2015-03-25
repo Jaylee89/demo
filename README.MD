@@ -1,3 +1,6 @@
+2015-0325
+-------------
+(1) urlencode() -> 将请求的url地址中的特殊字符串进行ascii码转换，  特别是用header()函数的地方; 微信请求code时的回调redirect_uri里面的地址就应该用urlencode()函数处理一下
 2015-0324
 -------------
 (1)安卓手机重启陷入死循环，开不了机。只好拔掉电源，装上，按住音量减少键和电源键。进入HBOOT, 等，点击wipe data/factory reset 选yes, 完了点击wipe cache partition ，完了，点击重启指令 ->ok了， 重新下载需要的软件，速度快多了
